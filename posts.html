@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Kasra Hosseini-K10">
+  <meta name="designer" content="Kasra Hoseini-K10">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/601631f518.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Post</title>
+</head>
+
+<body>
+  <!-- Define Navigation Area-->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" target="_self" title="Logotype">MyPanel</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#menu" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a href="index.html" class="nav-link" title="Dashboard" target="_self">Dashboard</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="posts.html" class="nav-link active" title="Posts" target="_blank">Posts</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="categories.html" class="nav-link" title="Categories" target="_blank">Categories</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="users.html" class="nav-link" title="Users" target="_blank">Users</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="tags.html" class="nav-link" title="Tags" target="_blank">Tags</a>
+          </li>
+        </ul><!--End Of Main Menu-->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="Hooray:))!!!">Welcome Admin</a>
+            <div class="dropdown-menu bg-light text-center">
+              <a href="profile.html" class="dropdown-item" title="Profile" target="_self">Profile</a>
+              <a href="setting.html" class="dropdown-item" title="Setting" target="_self">Setting</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link" title="Logout" target="_self">Logout</a>
+          </li>
+        </ul><!--End Of Extra Menu-->
+      </div><!--End Of div-collapse-->
+    </div><!--End Of COntainer-->
+  </nav>
+  <!-- End Of Navigation Area -->
+  <!-- Define Header Area -->
+  <header class="py-2 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 data-toggle="tooltip" data-placement="bottom"
+            title="This Panel Was Designed for Administrator ane includes statistics about website and other options"
+            class="text-white">
+            Posts
+          </h1>
+        </div><!--End Of COl-6-->
+      </div><!--End Of Row-->
+    </div><!--End Of COntainer-->
+  </header>
+  <!-- End Of Header Area -->
+  <!-- Define Main Area -->
+  <main>
+    <!-- Define User Action Control Area -->
+    <section id="actions" class="py-4 mb-4 bg-light border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addpostmodal"
+              title="Add Post">Add Post</a>
+          </div><!--End Of Col-md-3-->
+          <div class="col-md-6 ml-auto">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Post name in Here">
+              <div class="input-group-append">
+                <button class="btn btn-primary">Search</button>
+              </div><!--End Of input-group-append-->
+            </div><!--End Of input-group-->
+          </div><!--End Of Col-md-3-->
+        </div><!--End Of COntainer-->
+    </section>
+    <!-- End Of User Action Control Area -->
+    <!-- Add Posts Modal -->
+    <div class="modal fade" id="addpostmodal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Add Post</h5>
+            <button class="close text-white" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div><!--End Of Modal Header-->
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form method="POST" autocomplete="on">
+              <div class="form-group">
+                <label title="Title">Title:</label>
+                <input type="text" class="form-control" placeholder="Enter Title">
+              </div>
+              <div class="form-group">
+                <label>Category:</label>
+                <select name="cat" class="form-control">
+                  <option value="css">CSS</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Python">Python</option>
+                  <option value="Linux">Linux</option>
+                  <option value="jQuery">jQuery</option>
+                  <option value="Photoshop">PhotoShop</option>
+                  <option value="Laravel">Laravel</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>tag:</label>
+                <select name="cat" class="form-control">
+                  <option value="#css">#CSS</option>
+                  <option value="#JavaScript">#JavaScript</option>
+                  <option value="#PHP">#PHP</option>
+                  <option value="#Python">#Python</option>
+                  <option value="#Linux">#Linux</option>
+                  <option value="#jQuery">#jQuery</option>
+                  <option value="#Photoshop">#PhotoShop</option>
+                  <option value="#Laravel">#Laravel</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label title="Upload Image">Upload Image</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input">
+                  <label class="custom-file-label">Choose File</label>
+                </div>
+                <small class="form-text text-muted">Max Size 3MB</small>
+              </div>
+              <div class="form-group">
+                <label title="Post Body">Post Body</label>
+                <textarea name="editor1" class="form-control"></textarea>
+              </div>
+            </form>
+          </div>
+          <!--End Of Modal Body-->
+          <div class="modal-footer">
+            <button class="btn btn-warning text-white" type="submit" title="Draft">Draft</button>
+            <button class="btn btn-primary" data-dismiss="modal" type="submit" title="Save">Save</button>
+          </div>
+        </div><!--End Of Modal-content-->
+      </div><!--End Of Modal-dialog-->
+    </div><!--End Of Modal-->
+    <!-- End Of Posts Modal -->
+    <!-- Define Bar chart Area -->
+    <div class="container mb-3">
+      <div class="progress mt-2 mb-2">
+        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 90%;"
+          title="Progress pre week">Read Posts
+          90%</div>
+      </div>
+    </div><!--End Of Container-->
+    <!-- End Of Bar Chart Area -->
+    <!-- Define Latest Posts Area -->
+    <section id="posts">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h4>Latest Posts</h4>
+              </div><!--End Of Card-header-->
+              <table class="table table-striped text-center">
+                <thead class="thead-dark">
+                  <tr>
+                    <th class="bg-primary">#</th>
+                    <th class="bg-primary">Title</th>
+                    <th class="bg-primary">Category</th>
+                    <th class="bg-primary">Tag</th>
+                    <th class="bg-primary">Date</th>
+                    <th class="bg-primary">Modify</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="bg-primary text-white">1</td>
+                    <td>Post 1</td>
+                    <td>CSS</td>
+                    <td>#css</td>
+                    <td>10-12-2023</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">2</td>
+                    <td>Post 2</td>
+                    <td>JavaScript</td>
+                    <td>#javascript</td>
+                    <td>10-22-2023</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">3</td>
+                    <td>Post 3</td>
+                    <td>Python</td>
+                    <td>#python</td>
+                    <td>10-13-2022</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">4</td>
+                    <td>Post 4</td>
+                    <td>Linux</td>
+                    <td>#linux</t>
+                    <td>10-14-2024</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">5</td>
+                    <td>Post 5</td>
+                    <td>PHP</td>
+                    <td>#php</td>
+                    <td>10-10-2022</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">6</td>
+                    <td>Post 6</td>
+                    <td>Laravel</td>
+                    <td>#laravel</t>
+                    <td>10-12-2020</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">7</td>
+                    <td>Post 7</td>
+                    <td>Jquery</td>
+                    <td>#jquery</td>
+                    <td>10-12-2021</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">8</td>
+                    <td>Post 8</td>
+                    <td>Adobe PhotoShop</td>
+                    <td>#adobe_photoShop</td>
+                    <td>10-12-2018</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">9</td>
+                    <td>Post 9</td>
+                    <td>Dart</td>
+                    <td>#dart</td>
+                    <td>10-12-2018</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-primary text-white">10</td>
+                    <td>Post 10</td>
+                    <td>C</td>
+                    <td>#c</td>
+                    <td>10-12-2018</td>
+                    <td>
+                      <a href="post-detail.html" class="btn btn-primary" title="More Details" target="_blank">More
+                        Details</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- Pagination -->
+              <nav class="mx-auto">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a href="#" class="page-link">Previous</a>
+                  </li>
+                  <li class="page-item active">
+                    <a href="#" class="page-link">1</a>
+                  </li>
+                  <li class="page-item ">
+                    <a href="#" class="page-link">2</a>
+                  </li>
+                  <li class="page-item ">
+                    <a href="#" class="page-link">3</a>
+                  </li>
+                  <li class="page-item disabled">
+                    <a href="#" class="page-link">...</a>
+                  </li>
+                  <li class="page-item ">
+                    <a href="#" class="page-link">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div><!--End Of Card-->
+          </div><!-- End of col-->
+        </div><!--End Of Row-->
+      </div><!--End Of Container-->
+    </section>
+    <!-- Define Footer Area -->
+    <footer id="main-footer" class="bg-dark text-white mt-5 p-3">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="lead text-center">
+              Copyright &copy; <a href="https://kasra10design.com" target="_blank" title="Personal Site"
+                class="text-warning">Kasra
+                Hosseini(K10)</a> 2021 - <span id="year"></span>
+            </p>
+          </div><!--End Of Col-->
+        </div><!--End Of Row-->
+      </div><!--End Of Container-->
+    </footer>
+    <!-- End of Footer Area -->
+    <!-- JQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"></script>
+    <!-- CK Editor Script -->
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+    <script>
+      // CopyRight Year
+      $('#year').text(new Date().getFullYear());
+      // Tooltip Script
+      $('[data-toggle="tooltip"]').tooltip();
+      // Ck Editor
+      CKEDITOR.replace('editor1');
+    </script>
+</body>
+
+</html>

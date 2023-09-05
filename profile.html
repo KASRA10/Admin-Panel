@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Kasra Hosseini-K10">
+  <meta name="designer" content="Kasra Hoseini-K10">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/601631f518.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Profile</title>
+</head>
+
+<body>
+  <!-- Define Navigation Area-->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" target="_self" title="Logotype">MyPanel</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#menu" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a href="index.html" class="nav-link" title="Dashboard" target="_self">Dashboard</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="posts.html" class="nav-link" title="Posts" target="_blank">Posts</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="categories.html" class="nav-link" title="Categories" target="_blank">Categories</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="users.html" class="nav-link" title="Users" target="_blank">Users</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="tags.html" class="nav-link" title="Tags" target="_blank">Tags</a>
+          </li>
+        </ul><!--End Of Main Menu-->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="Hooray:))!!!">Welcome Admin</a>
+            <div class="dropdown-menu bg-light text-center">
+              <a href="profile.html" class="dropdown-item active" title="Profile" target="_self">Profile</a>
+              <a href="setting.html" class="dropdown-item" title="Setting" target="_self">Setting</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link" title="Logout" target="_self">Logout</a>
+          </li>
+        </ul><!--End Of Extra Menu-->
+      </div><!--End Of div-collapse-->
+    </div><!--End Of COntainer-->
+  </nav>
+  <!-- End Of Navigation Area -->
+  <!-- Define Header Area -->
+  <header class="py-2 bg-info text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 data-toggle="tooltip" data-placement="bottom"
+            title="This Panel Was Designed for Administrator to Edit The Personal Profile And Account"
+            class="text-white">
+            Profile
+          </h1>
+        </div><!--End Of COl-6-->
+      </div><!--End Of Row-->
+    </div><!--End Of Container-->
+  </header>
+  <!-- End Of Header Area -->
+  <!-- Define Main Area -->
+  <main>
+    <!-- Define User Action Control Area -->
+    <section id="actions" class="py-4 mb-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="index.html" class="btn btn-outline-dark btn-block">Back to Dashboard</a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#changepassword">Change
+              Password</a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="btn btn-danger btn-block" data-toggle="modal" data-target="#deleteaccount">Delete
+              Account</a>
+          </div><!--End Of Col-md-4-->
+        </div><!--Emd Of Row-->
+      </div><!--End Of Container-->
+    </section>
+    <!-- End of User Action Control Area -->
+    <!-- Add Modals -->
+    <!-- Add Change Password Modal -->
+    <div class="modal fade" id="changepassword">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title">Change Password</h5>
+            <button class="close text-white" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div><!-- End of Modal Header-->
+          <!-- Modal-body -->
+          <div class="modal-body">
+            <form method="POST" autocomplete="on">
+              <div class="form-group">
+                <label title="Password">Current Password:</label>
+                <input type="password" class="form-control" placeholder="Enter Your Current Password" name="Pass">
+              </div>
+              <div class="form-group">
+                <label title="Password">New Password:</label>
+                <input type="password" class="form-control" placeholder="Enter Your New Password" name="Pass">
+                <small class="form-text text-muted">Pick a Strong ones</small>
+              </div>
+              <div class="form-group">
+                <label>Re-type Password:</label>
+                <input type="password" class="form-control" placeholder="Re-type your New password" name="Rpass">
+                <small class="form-text text-muted">As Same Password</small>
+              </div>
+            </form>
+          </div><!--End Of Modal-body-->
+          <div class="modal-footer">
+            <button class="btn btn-warning" data-dismiss="modal" type="submit" title="Save">Save</button>
+          </div><!--End Of Modal-footer-->
+        </div><!--End Of Modal-Content-->
+      </div><!--End Of Modal-dialog-->
+    </div>
+    <!-- End Of Change Password Modal -->
+    <!-- Add Change Password Modal -->
+    <div class="modal fade" id="deleteaccount">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title">Delete Profile</h5>
+            <button class="close text-white" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div><!-- End of Modal Header-->
+          <!-- Modal-body -->
+          <div class="modal-body">
+            <form method="POST" autocomplete="on">
+              <div class="form-group">
+                <label title="Password">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter Your New Password" name="Pass">
+              </div>
+              <div class="form-group">
+                <label>Re-type Password:</label>
+                <input type="password" class="form-control" placeholder="Re-type your password" name="Rpass">
+              </div>
+              <div class="form-group">
+                <label title="Category Explanation">Cause Of Delete:</label>
+                <textarea class="form-control"></textarea>
+              </div>
+            </form>
+          </div><!--End Of Modal-body-->
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal" type="submit" title="Save">Delete</button>
+          </div><!--End Of Modal-footer-->
+        </div><!--End Of Modal-Content-->
+      </div><!--End Of Modal-dialog-->
+    </div>
+    <!-- End Of Change Password Modal -->
+    <!-- End nOf Modals -->
+    <!-- Profile Info Area -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header">
+                <h4>Edit profile</h4>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" class="form-control" value="Kasra Hosseini">
+                  </div>
+                  <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" class="form-control" value="kasrasparrow@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label>Info:</label>
+                    <textarea name="editor1" class="form-control">
+                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum necessitatibus laboriosam alias illo, asperiores sapiente quas quasi omnis ullam corporis amet sunt suscipit possimus! Dolore repellendus facere laborum provident molestias hic animi tempora fugiat ab harum soluta totam delectus sit veniam, dolorem dicta beatae expedita dolores ea nemo eius accusantium incidunt modi. Necessitatibus, vitae. Sit sapiente voluptatum dolorum repellat perspiciatis!
+                                  </textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline-info">Save</button>
+              </div><!--End Of Card-Footer-->
+            </div><!--End Of Card-->
+          </div><!-- End of Col-md-9 -->
+          <div class="col-md-3">
+            <h3 class="text-center">Profile Image</h3>
+            <img src="User-Image.png" alt="Profile Image" class="d-block img-fluid mb-3">
+            <button class="btn btn-warning btn-block">Edit Image</button>
+            <button class="btn btn-danger btn-block">Remove Image</button>
+          </div><!--End Of COl-md-9-->
+        </div><!--End Of Row-->
+      </div><!--End Of Container-->
+    </section>
+    <!-- End of Info Area -->
+  </main>
+  <!-- End Of Main Area -->
+  <!-- Define Footer Area -->
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="lead text-center">
+            Copyright &copy; <a href="https://kasra10design.com" target="_blank" title="Personal Site"
+              class="text-warning">Kasra
+              Hosseini(K10)</a> 2021 - <span id="year"></span>
+          </p>
+        </div><!--End Of Col-->
+      </div><!--End Of Row-->
+    </div><!--End Of Container-->
+  </footer>
+  <!-- End of Footer Area -->
+  <!-- JQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <!-- CK Editor Script -->
+  <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+  <script>
+    // CopyRight Year
+    $('#year').text(new Date().getFullYear());
+    // Tooltip Script
+    $('[data-toggle="tooltip"]').tooltip();
+    // Ck Editor
+    CKEDITOR.replace('editor1');
+  </script>
+</body>
+
+</html>
